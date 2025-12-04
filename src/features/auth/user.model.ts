@@ -34,15 +34,16 @@ const UserSchema: Schema = new Schema(
     { timestamps: true }
 );
 
-UserSchema.methods.matchPassword = async function (enteredPassword: string) {
-    return await argon2.verify(this.passwordHash, enteredPassword);
+UserSchema.methods.matchPassword = async function (this: IUser, enteredPassword: string) {
+  return await argon2.verify(this.passwordHash, enteredPassword);
 };
 
-UserSchema.pre('save', async function () {
-  if (!this.isModified('passwordHash')) {
-    return;
-  }
-  this.passwordHash = await argon2.hash(this.passwordHash);
+UserSchema.pre<IUser>('save', async function () {
+  if (!this.isModified('passwordHash')) return;
+
+  this.passwordHash = await argon2.hash(this.passwordHash as string);
 });
+
+
 
 export default mongoose.model<IUser>('User', UserSchema);
