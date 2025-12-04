@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import User, { UserRole } from '../auth/user.model';
+import User, { UserRole } from '../auth/user.model.js';
 
 export const createUser = async (req: Request, res: Response) => {
     try {

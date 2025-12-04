@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import * as AuthService from './auth.service';
-import { UserRole } from './user.model';
+import * as AuthService from './auth.service.js';
+import { UserRole } from './user.model.js';
 
 export const register = async (req: Request, res: Response) => {
     const { universityId, password, name, role } = req.body;

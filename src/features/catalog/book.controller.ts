@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as BookService from './book.service';
+import * as BookService from './book.service.js';
 
 export const create = async (req: Request, res: Response) => {
     try {

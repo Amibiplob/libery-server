@@ -1,13 +1,13 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { connectDB } from './config/db';
-import authRoutes from './features/auth/auth.routes';
-import bookRoutes from './features/catalog/book.routes';
-import circulationRoutes from './features/circulation/circulation.routes';
-import adminRoutes from './features/admin/admin.routes';
-import contentRoutes from './features/content/content.routes';
-import researchRoutes from './features/research/research.routes';
+import { connectDB } from './config/db.js';
+import authRoutes from './features/auth/auth.routes.js';
+import bookRoutes from './features/catalog/book.routes.js';
+import circulationRoutes from './features/circulation/circulation.routes.js';
+import adminRoutes from './features/admin/admin.routes.js';
+import contentRoutes from './features/content/content.routes.js';
+import researchRoutes from './features/research/research.routes.js';
 
 dotenv.config();
 

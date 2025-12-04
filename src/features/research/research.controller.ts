@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import ResearchPaper from './research.model';
+import ResearchPaper from './research.model.js';
 
 export const submitResearch = async (req: Request, res: Response) => {
     try {

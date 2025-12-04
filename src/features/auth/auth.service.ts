@@ -1,4 +1,4 @@
-import User, { IUser, UserRole } from './user.model';
+import User, { IUser, UserRole } from './user.model.js';
 import jwt from 'jsonwebtoken';
 
 const generateToken = (id: string, role: UserRole) => {

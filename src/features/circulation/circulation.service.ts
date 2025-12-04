@@ -1,6 +1,6 @@
-import Loan, { LoanStatus } from './loan.model';
-import Book from '../catalog/book.model';
-import { UserRole } from '../auth/user.model';
+import Loan, { LoanStatus } from './loan.model.js';
+import Book from '../catalog/book.model.js';
+import { UserRole } from '../auth/user.model.js';
 
 const BORROW_LIMITS = {
     [UserRole.STUDENT]: 3,

@@ -1,5 +1,5 @@
 import express from 'express';
-import { submitResearch, listResearch, approveResearch, generateCitation } from './research.controller';
+import { submitResearch, listResearch, approveResearch, generateCitation } from './research.controller.js';
 
 const router = express.Router();
 

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import News from './news.model';
+import News from './news.model.js';
 
 export const createNews = async (req: Request, res: Response) => {
     try {

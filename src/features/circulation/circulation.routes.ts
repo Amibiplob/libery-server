@@ -1,5 +1,5 @@
 import express from 'express';
-import { borrow, myLoans, returnItem } from './circulation.controller';
+import { borrow, myLoans, returnItem } from './circulation.controller.js';
 
 const router = express.Router();
 

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as CirculationService from './circulation.service';
+import * as CirculationService from './circulation.service.js';
 
 // Extend Request to include User (from Auth Middleware - to be implemented properly later)
 interface AuthRequest extends Request {
